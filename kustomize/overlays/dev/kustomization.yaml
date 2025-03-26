@@ -6,3 +6,5 @@ resources:
 
 images:
 - name: ___IMAGE_URL___@___IMAGE_DIGEST___
+  newName: 339713019092.dkr.ecr.ap-northeast-1.amazonaws.com/helloworld-aka-gp
+  newTag: d7c5130f938f28d941fb299e79c278747e634c5f
