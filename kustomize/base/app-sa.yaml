@@ -1,0 +1,20 @@
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: helloworld-aka-gp-sa
+imagePullSecrets:
+  - name: ecr-auto-generated-secret
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: helloworld-aka-gp-sa-admin
+subjects:
+- kind: ServiceAccount
+  name: helloworld-aka-gp-sa
+  namespace: helloworld-aka-gp
+roleRef:
+  kind: ClusterRole
+  name: admin
+  apiGroup: rbac.authorization.k8s.io

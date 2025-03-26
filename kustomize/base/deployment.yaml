@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: helloworld-aka-gp
+  name: helloworld-aka-gp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: helloworld-aka-gp
+  template:
+    metadata:
+      labels:
+        app: helloworld-aka-gp
+    spec:
+      containers:
+      - image: ___IMAGE_URL___@___IMAGE_DIGEST___
+        name: helloworld-aka-gp
+        ports:
+        - containerPort: 3000
+          protocol: TCP
+      serviceAccountName: helloworld-aka-gp-sa

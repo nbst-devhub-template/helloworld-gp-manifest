@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+commonLabels:
+  backstage.io/kubernetes-id: helloworld-aka-gp
+
+resources:
+  - deployment.yaml
+  - service.yaml
+  - route.yaml
+  - ecr-secret.yaml
+  - app-sa.yaml
